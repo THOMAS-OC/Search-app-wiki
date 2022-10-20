@@ -29,6 +29,7 @@ input{
     display: block;
     width: 45%;
     height: 40px;
+    min-width: 350px;
     box-shadow: 0px 3px 10px $color-shadow;
 }
 
@@ -82,6 +83,7 @@ section{
 article{
     height: 90px;
     width: 40%;
+    min-width: 300px;
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -89,4 +91,19 @@ article{
     border-radius: 5px;
     border: 2px solid black;
     padding: 10px;
+    animation-name: article;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+}
+
+@keyframes article {
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }

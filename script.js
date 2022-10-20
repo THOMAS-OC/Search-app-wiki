@@ -15,13 +15,15 @@ form.addEventListener("submit", (event) => {
         
         results = data["query"]["search"]
         console.log(results)
+        let delay = 0
 
         for (const result of results) {
             console.log(result);
             let newArticle = document.createElement("article");
-            newArticle.innerHTML = `<a target="_blank" href="https://en.wikipedia.org?curid=${result["pageid"]}"> ${result["title"]} </a> <p> https://en.wikipedia.org?curid=${result["pageid"]} </p> <p> ${result["snippet"]} </p> `
+            newArticle.style.animationDelay = `${delay}s`
+            newArticle.innerHTML = `<a target="_blank" href="https://en.wikipedia.org?curid=${result["pageid"]}"> ${result["title"]} </a> <p style="color:green"> https://en.wikipedia.org?curid=${result["pageid"]} </p> <p> ${result["snippet"]} </p> `
             section.appendChild(newArticle)
-            
+            delay = delay + 0.3
 
         }
     
