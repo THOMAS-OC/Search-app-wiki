@@ -1,0 +1,30 @@
+$color-primary: #F1F1F1;
+
+body {
+    background-color: $color-primary;
+}
+
+img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto 10px auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: sans-serif;
+    span{
+        font-weight: bold;
+    }
+}
+
+input{
+    padding: 10px;
+    border: none;
+    margin: 20px auto 10px auto;
+    display: block;
+    width: 45%;
+    height: 40px;
+}
